@@ -6,7 +6,7 @@
   list-style: none;
 }
 
-.actions .icon-edit {
+/* .actions .icon-edit {
   display: block;
   width: 40px;
   height: 40px;
@@ -24,4 +24,4 @@
   border: none;
   background-image: url(../images/star.svg);
   cursor: pointer;
-}
+} */

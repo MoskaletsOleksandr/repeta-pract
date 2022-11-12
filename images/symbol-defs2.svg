@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
-    <symbol id="edit" viewBox="0 0 32 32">
+    <symbol id="icon-edit" viewBox="0 0 32 32">
       <path d="m19.898 5.392 6.51 6.509L9.931 28.378l-6.506-6.509L19.899 5.392zm11.449-1.57L28.444.919c-.521-.52-1.24-.842-2.035-.842s-1.514.322-2.035.842L21.593 3.7l6.51 6.51 3.244-3.244c.403-.402.652-.958.652-1.572s-.249-1.17-.652-1.572zM.018 31.019a.74.74 0 0 0 .901.88l-.005.001 7.254-1.759-6.506-6.509-1.644 7.387z"/>
     </symbol>
     <symbol id="facebook" viewBox="0 0 32 32">
