@@ -13,5 +13,74 @@
       <li><a href="/02-inline.html">Встроенные SVG</a></li>
       <li><a href="/03-sprite.html">SVG-спрайт</a></li>
     </ul>
+
+    <form class="js-speaker-form">
+      <label for="user-name">Ім'я</label>
+      <input type="text" name="user-name" id="user-name" />
+
+      <label for="tel">Телефон</label>
+      <input type="tel" name="tel" id="tel" />
+
+      <label for="mail">Пошта</label>
+      <input type="email" name="mail" id="mail" />
+
+      <div role="group">
+        <input type="checkbox" name="topic" value="html" id="html" />
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="topic" value="css" id="css" />
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="topic" value="js" id="js" />
+        <label for="js">JS</label>
+      </div>
+
+      <div role="group">
+        <input
+          type="radio"
+          name="experience"
+          value="junior"
+          id="junior"
+          checked
+        />
+        <label for="junior">Junior</label>
+
+        <input type="radio" name="experience" value="middle" id="middle" />
+        <label for="middle">Middle</label>
+
+        <input type="radio" name="experience" value="senior" id="senior" />
+        <label for="senior">Senior</label>
+      </div>
+
+      <label for="date">Дата докладу</label>
+      <input type="datetime-local" name="date" id="date" />
+
+      <label for="pdf">Завантажити копію докладу в pdf</label>
+      <input type="file" name="pdf" id="pdf" />
+
+      <label for="comment">Залиште коментар</label>
+      <textarea name="comment" id="comment" rows="8"></textarea>
+
+      <input type="checkbox" name="policy" id="policy" />
+      <label for="policy">Згоден з умовами</label>
+
+      <button type="submit">Залишити заявку</button>
+    </form>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
