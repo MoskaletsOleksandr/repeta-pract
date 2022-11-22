@@ -14,42 +14,79 @@
       <li><a href="/03-sprite.html">SVG-спрайт</a></li>
     </ul>
 
-    <form class="js-speaker-form">
-      <label for="user-name">Ім'я</label>
-      <input type="text" name="user-name" id="user-name" />
-
-      <label for="tel">Телефон</label>
-      <input type="tel" name="tel" id="tel" />
-
-      <label for="mail">Пошта</label>
-      <input type="email" name="mail" id="mail" />
-
-      <div role="group">
-        <input type="checkbox" name="topic" value="html" id="html" />
-        <label for="html">HTML</label>
-
-        <input type="checkbox" name="topic" value="css" id="css" />
-        <label for="css">CSS</label>
-
-        <input type="checkbox" name="topic" value="js" id="js" />
-        <label for="js">JS</label>
+    <form class="form js-speaker-form" autocomplete="on">
+      <div class="form-field">
+        <label for="user-name" class="form-label">Ім'я</label>
+        <input
+          class="form-input"
+          type="text"
+          name="user-name"
+          id="user-name"
+          placeholder="Ім'я Прізвище"
+          autofocus
+        />
       </div>
 
-      <div role="group">
+      <div class="form-field">
+        <label for="tel">Телефон</label>
         <input
-          type="radio"
-          name="experience"
-          value="junior"
-          id="junior"
-          checked
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="+38 (000) 000-00-00"
         />
-        <label for="junior">Junior</label>
+      </div>
 
-        <input type="radio" name="experience" value="middle" id="middle" />
-        <label for="middle">Middle</label>
+      <div class="form-field">
+        <label for="mail">Пошта</label>
+        <input type="email" name="mail" id="mail" placeholder="my@mail.com" />
+      </div>
 
-        <input type="radio" name="experience" value="senior" id="senior" />
-        <label for="senior">Senior</label>
+      <div role="group" class="group">
+        <h2 class="group-title">Тема доповіді</h2>
+
+        <ul class="topic-options">
+          <li>
+            <input type="checkbox" name="topic" value="html" id="html" />
+            <label for="html">HTML</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="css" id="css" />
+            <label for="css">CSS</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="js" id="js" />
+            <label for="js">JS</label>
+          </li>
+        </ul>
+      </div>
+
+      <div role="group" class="group">
+        <h2 class="group-title">Ваш рівень знань</h2>
+        <ul class="experience-options">
+          <li>
+            <input
+              type="radio"
+              name="experience"
+              value="junior"
+              id="junior"
+              checked
+            />
+            <label for="junior">Junior</label>
+          </li>
+
+          <li>
+            <input type="radio" name="experience" value="middle" id="middle" />
+            <label for="middle">Middle</label>
+          </li>
+
+          <li>
+            <input type="radio" name="experience" value="senior" id="senior" />
+            <label for="senior">Senior</label>
+          </li>
+        </ul>
       </div>
 
       <label for="date">Дата докладу</label>
