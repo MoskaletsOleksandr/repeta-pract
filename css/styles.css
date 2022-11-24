@@ -22,6 +22,10 @@ textarea {
 }
 
 .form-field {
+  position: relative;
+
+  display: block;
+
   /* outline: 1px solid blue; */
   display: flex;
   flex-direction: column;
@@ -35,6 +39,7 @@ textarea {
 .form-field input {
   margin: 0;
   padding: 10px 20px;
+  padding-left: 50px;
   border-radius: 3px;
   border: 1px solid #2a2a2a;
 }
@@ -80,4 +85,84 @@ textarea {
 
 .comment {
   padding: 8px;
+}
+
+/* .form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-50px);
+} */
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+
+  transition: transform 250ms linear;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  background-color: tomato;
+}
+
+/* .form-input:focus ~ .icon {
+  background-color: blue;
+  border-radius: 50%;
+} */
+
+.form-field:focus-within > .icon {
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-50px);
+}
+
+.form-input {
+  padding-left: 80px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  /* appearance: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2a2a2a;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: blue;
+  background-image: url(../images/full-check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
