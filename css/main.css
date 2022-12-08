@@ -140,6 +140,18 @@ body.modal-open {
   background-color: #009688;
 }
 
+@media screen and (max-width: 767px) {
+  .reviews {
+    display: none;
+  }
+}
+
+.reviews-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .reviews-item {
   text-align: center;
   padding: 40px;
